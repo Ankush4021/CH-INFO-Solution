@@ -15,8 +15,13 @@ const Services = () => {
                 </h2>
             </div>
 
+            {/* 👇 YAHAN CHANGE KIYA HAI */}
             {servicesData.map((service, index) => (
-                <ServiceItem key={index} service={service} />
+                <ServiceItem
+                    key={index}
+                    service={service}
+                    index={index}
+                />
             ))}
 
             {/* CTA */}
