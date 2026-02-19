@@ -1,18 +1,20 @@
 import React from "react";
+import AnimatedHeading from "../../../components/ui/AnimatedHeading";
 
 const AboutIntro = () => {
   return (
     <div className="space-y-8 transition-all duration-700 hover:-translate-y-1">
-      
+
       <p className="text-indigo-600 font-semibold tracking-widest uppercase">
         About Us
       </p>
 
-      <h2 className="text-5xl font-bold text-gray-900 leading-tight">
+      <AnimatedHeading className="text-5xl font-bold text-gray-900 leading-tight" >
+
         We Craft Digital Solutions
         <br />
         That Build Real Business Impact
-      </h2>
+      </AnimatedHeading>
 
       <p className="text-gray-600 text-lg max-w-xl">
         CH Info Solution helps businesses grow with scalable web,

@@ -39,9 +39,8 @@ const Hero = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === current ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${index === current ? "opacity-100" : "opacity-0"
+            }`}
         >
           <img
             src={`${slide.image}?auto=format&fit=crop&w=1600&q=60`}
@@ -61,7 +60,13 @@ const Hero = () => {
           {slides[current].sub}
         </p>
 
-        <button className="mt-8 px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+        <button
+          onClick={() =>
+            document
+              .getElementById("services")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+          className="mt-8 px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition hover:scale-[1.1]">
           Explore Services
         </button>
       </div>

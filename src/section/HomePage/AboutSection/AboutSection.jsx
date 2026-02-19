@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AboutIntro from "./AboutIntro";
 import AboutHighlights from "./AboutHighlights";
 import AboutVisual from "./AboutVisual";
+import FadeSection from "../../../components/animations/FadeSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,13 +18,11 @@ const AboutSection = () => {
             gsap.from(".about-intro", {
                 y: 40,
                 opacity: 0,
-                scale: 0.98,
-                duration: 1.2,
-                ease: "power2.out",
+                duration: 1,
+                ease: "power3.out",
                 scrollTrigger: {
-                    trigger: ".about-intro",
-                    start: "top 85%",
-                    toggleActions: "play reverse play reverse",
+                    trigger: sectionRef.current,
+                    start: "top 80%",
                 },
             });
 
@@ -31,12 +30,11 @@ const AboutSection = () => {
             gsap.from(".about-visual", {
                 y: 60,
                 opacity: 0,
-                duration: 1.3,
-                ease: "power2.out",
+                duration: 1.2,
+                ease: "power3.out",
                 scrollTrigger: {
-                    trigger: ".about-visual",
-                    start: "top 85%",
-                    toggleActions: "play reverse play reverse",
+                    trigger: sectionRef.current,
+                    start: "top 80%",
                 },
             });
 
@@ -44,13 +42,12 @@ const AboutSection = () => {
             gsap.from(".about-card", {
                 y: 50,
                 opacity: 0,
-                duration: 2,
+                duration: 1,
                 stagger: 0.2,
-                ease: "power2.out",
+                ease: "power3.out",
                 scrollTrigger: {
-                    trigger: ".about-card",
-                    start: "top 90%",
-                    toggleActions: "play reverse play reverse",
+                    trigger: sectionRef.current,
+                    start: "top 85%",
                 },
             });
 
@@ -60,25 +57,27 @@ const AboutSection = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="bg-white py-32 px-6">
-            <div className="max-w-7xl mx-auto space-y-24">
+        <FadeSection >
+            <section ref={sectionRef} className="bg-white py-32 px-6">
+                <div className="max-w-7xl mx-auto space-y-24">
 
-                <div className="grid lg:grid-cols-2 gap-20 items-center">
-                    <div className="about-intro">
-                        <AboutIntro />
+                    <div className="grid lg:grid-cols-2 gap-20 items-center">
+                        <div className="about-intro">
+                            <AboutIntro />
+                        </div>
+
+                        <div className="about-visual">
+                            <AboutVisual />
+                        </div>
                     </div>
 
-                    <div className="about-visual">
-                        <AboutVisual />
+                    <div className="about-card">
+                        <AboutHighlights />
                     </div>
-                </div>
 
-                <div className="about-card">
-                    <AboutHighlights />
                 </div>
-
-            </div>
-        </section>
+            </section>
+        </FadeSection>
     );
 };
 
