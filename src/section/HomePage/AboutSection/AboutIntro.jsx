@@ -1,5 +1,6 @@
 import React from "react";
 import AnimatedHeading from "../../../components/ui/AnimatedHeading";
+import { Link } from "react-router-dom";
 
 const AboutIntro = () => {
   return (
@@ -10,7 +11,6 @@ const AboutIntro = () => {
       </p>
 
       <AnimatedHeading className="text-5xl font-bold text-gray-900 leading-tight" >
-
         We Craft Digital Solutions
         <br />
         That Build Real Business Impact
@@ -22,9 +22,13 @@ const AboutIntro = () => {
         and strategic thinking.
       </p>
 
-      <button className="px-8 py-4 bg-indigo-600 text-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 font-semibold">
+      {/* CTA Button */}
+      <Link
+        to="/about"
+        className="inline-block px-8 py-4 bg-indigo-600 text-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 font-semibold"
+      >
         Learn More
-      </button>
+      </Link>
 
     </div>
   );

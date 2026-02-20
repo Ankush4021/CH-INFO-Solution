@@ -32,10 +32,9 @@ const Navbar = () => {
                 `relative font-medium transition duration-300
                 after:absolute after:left-0 after:-bottom-1 after:h-[2px]
                 after:bg-blue-600 after:transition-all after:duration-300
-                ${
-                  isActive
-                    ? "text-blue-600 after:w-full"
-                    : "text-gray-900 font-bold after:w-0 hover:after:w-full hover:text-blue-600"
+                ${isActive
+                  ? "text-blue-600 after:w-full"
+                  : "text-gray-900 font-bold after:w-0 hover:after:w-full hover:text-blue-600"
                 }`
               }
             >
@@ -45,9 +44,14 @@ const Navbar = () => {
         </nav>
 
         {/* Desktop CTA */}
-        <button className="hidden md:block px-5 py-2 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700 transition">
-          Get Quote
-        </button>
+        <a
+          href="https://wa.me/918377996001"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:block px-5 py-2 bg-green-500 text-white rounded-full text-sm hover:bg-green-600 transition"
+        >
+          WhatsApp Us
+        </a>
 
         {/* Mobile Toggle */}
         <div className="md:hidden z-50">
@@ -69,9 +73,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-500 overflow-hidden ${
-          isOpen ? "max-h-[400px] py-6" : "max-h-0"
-        }`}
+        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-500 overflow-hidden ${isOpen ? "max-h-[400px] py-6" : "max-h-0"
+          }`}
       >
         <div className="flex flex-col items-center gap-6">
           {navLinks.map((link) => (
@@ -80,8 +83,7 @@ const Navbar = () => {
               to={link.path}
               onClick={() => setIsOpen(false)}
               className={({ isActive }) =>
-                `text-lg font-medium ${
-                  isActive ? "text-blue-600" : "text-gray-800"
+                `text-lg font-medium ${isActive ? "text-blue-600" : "text-gray-800"
                 }`
               }
             >
@@ -89,9 +91,14 @@ const Navbar = () => {
             </NavLink>
           ))}
 
-          <button className="mt-2 px-6 py-2 bg-blue-600 text-white rounded-full">
-            Get Quote
-          </button>
+          <a
+            href="https://wa.me/918377996001"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:block px-5 py-2 bg-green-500 text-white rounded-full text-sm hover:bg-green-600 transition"
+          >
+            WhatsApp Us
+          </a>
         </div>
       </div>
     </header>

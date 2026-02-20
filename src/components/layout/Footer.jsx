@@ -1,4 +1,5 @@
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import logo from '../../assets/logo/logoCHinfo.png';
 
 const Footer = () => {
   return (
@@ -13,9 +14,11 @@ const Footer = () => {
 
         {/* Company Info */}
         <div className="flex flex-col items-center lg:items-start">
-          <h2 className="text-xl lg:text-2xl font-bold text-white mb-4 lg:mb-6">
-            CH INFO SOLUTION
-          </h2>
+          <img
+            src={logo}
+            alt="CH Info Solution Logo"
+            className="w-36 mb-5 brightness-110"
+          />
           <p className="text-sm lg:text-base leading-relaxed max-w-xs lg:max-w-sm">
             We provide complete IT Solutions delivering innovative
             technology services ensuring reliability and growth.
@@ -44,8 +47,14 @@ const Footer = () => {
             <a href="tel:+918377996001" className="hover:text-blue-600 transition">
               +91 8377996001
             </a>
+            <a href="tel:+918377996001" className="hover:text-blue-600 transition">
+              +91 7053926977
+            </a>
             <a href="mailto:mohitbeniwal94636@gmail.com" className="hover:text-blue-600 transition mt-4">
               mohitbeniwal94636@gmail.com
+            </a>
+            <a href="mailto:dhruvbeniwal2314@gmail.com" className="hover:text-blue-600 transition mt-4">
+              dhruvbeniwal2314@gmail.com
             </a>
           </div>
         </div>
