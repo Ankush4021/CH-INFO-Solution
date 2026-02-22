@@ -40,7 +40,7 @@ const ServicesCTA = () => {
                         </a>
 
                         <a
-                            href="tel:+91XXXXXXXXXX"
+                            href="tel:+918377996001"
                             className="px-8 py-3 border border-gray-300 text-sm rounded-lg hover:border-black hover:text-black transition duration-300"
                         >
                             Call Our Team
