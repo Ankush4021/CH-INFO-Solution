@@ -3,6 +3,9 @@ import servicesData from "./servicesData";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from 'react-router-dom';
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,15 +70,16 @@ const Services = () => {
             </div>
 
             {/* CTA */}
-            <div className="mt-24 py-20 text-center bg-gray-50">
+            <div className="mt-10 py-14 text-center bg-gray-50">
                 <h3 className="text-3xl font-semibold text-gray-900 mb-6">
                     Looking For Reliable IT Support?
                 </h3>
 
-                <button className="px-10 py-4 bg-blue-600 text-white rounded-full 
-        hover:bg-blue-700 transition-transform duration-300 hover:scale-105">
+                <Link
+                    to="/contact"
+                    className="px-10 py-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-transform duration-300 hover:scale-105">
                     Get In Touch
-                </button>
+                </Link>
             </div>
         </section>
     );
