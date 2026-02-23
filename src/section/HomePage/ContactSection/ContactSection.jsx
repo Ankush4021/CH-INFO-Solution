@@ -15,12 +15,12 @@ const ContactSection = () => {
                         </p>
 
                         <AnimatedHeading>
-                            <h2 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+                            <p className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
                                 Let's Build Something
                                 <span className="block text-indigo-600 mt-2">
                                     Extraordinary Together
                                 </span>
-                            </h2>
+                            </p>
                         </AnimatedHeading>
 
                         <p className="mt-6 text-gray-600 max-w-md leading-normal">

@@ -6,7 +6,7 @@ const AboutIntro = () => {
   return (
     <div className="space-y-8 transition-all duration-700 hover:-translate-y-1">
 
-      <p className="text-indigo-600 font-semibold tracking-widest uppercase">
+      <p className="text-blue-700 font-semibold tracking-widest uppercase">
         About Us
       </p>
 

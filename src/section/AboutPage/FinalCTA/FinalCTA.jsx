@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const FinalCTA = () => {
     return (
-        <section className="bg-gray-50 py-28">
+        <section className="bg-gray-50 py-28npm ">
             <div className="max-w-5xl mx-auto px-6 text-center">
 
                 <motion.div
@@ -15,7 +15,7 @@ const FinalCTA = () => {
                     transition={{ duration: 0.6 }}
                     className="space-y-8"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-500 leading-tight">
                         Let's Build Smarter
                         <br />
                         <span className="text-blue-700">
