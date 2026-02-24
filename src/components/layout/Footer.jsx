@@ -1,5 +1,6 @@
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import logo from '../../assets/logo/logoCHinfo.png';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -30,11 +31,31 @@ const Footer = () => {
           <h3 className="text-base lg:text-lg font-semibold text-white mb-4 lg:mb-6">
             Useful Links
           </h3>
+
           <ul className="space-y-2 lg:space-y-3 text-sm lg:text-base">
-            <li className="hover:text-blue-500 transition cursor-pointer">Home</li>
-            <li className="hover:text-blue-500 transition cursor-pointer">About Us</li>
-            <li className="hover:text-blue-500 transition cursor-pointer">Services</li>
-            <li className="hover:text-blue-500 transition cursor-pointer">Contact Us</li>
+            <li>
+              <Link to="/" className="hover:text-blue-500 transition">
+                Home
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/about" className="hover:text-blue-500 transition">
+                About Us
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/services" className="hover:text-blue-500 transition">
+                Services
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/contact" className="hover:text-blue-500 transition">
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </div>
 

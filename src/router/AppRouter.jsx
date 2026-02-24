@@ -5,10 +5,12 @@ import Services from "../pages/Services"
 import About from "../pages/About"
 import Contact from "../pages/Contact"
 import ServiceDetails from "../pages/ServiceDetails";
+import ScrollToTop from './../components/ScrollToTop';
 
 const AppRouter = () => {
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <Layout>
                 <Routes>
                     <Route path="/" element={<Home />} />

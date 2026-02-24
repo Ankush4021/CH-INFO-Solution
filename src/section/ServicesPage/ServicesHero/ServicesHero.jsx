@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const container = {
     hidden: {},
@@ -62,23 +63,22 @@ const ServicesHero = () => {
                     </motion.p>
 
                     {/* CTA */}
-                    <motion.div
-                        variants={fadeUp}
-                        className="mt-8 flex gap-4"
-                    >
-                        <a
-                            href="/contact"
+                    <motion.div variants={fadeUp} className="mt-8 flex gap-4">
+
+                        <Link
+                            to="/contact"
                             className="px-6 py-3 bg-blue-600 text-white text-sm rounded-md hover:bg-gray-800 transition duration-300"
                         >
                             Get Consultation
-                        </a>
+                        </Link>
 
-                        <a
-                            href="/about"
+                        <Link
+                            to="/about"
                             className="px-6 py-3 border border-gray-400 text-sm rounded-md hover:border-black hover:text-black transition duration-300"
                         >
                             Learn More
-                        </a>
+                        </Link>
+
                     </motion.div>
                 </motion.div>
 
