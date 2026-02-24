@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const slides = [
   {
@@ -29,17 +30,18 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
 
+      {/* Background Images (Old Style Smooth Fade) */}
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${index === current ? "opacity-100" : "opacity-0"
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === current ? "opacity-100" : "opacity-0"
             }`}
         >
           <img
@@ -51,7 +53,13 @@ const Hero = () => {
         </div>
       ))}
 
-      <div className="relative text-center px-6 max-w-3xl">
+      {/* Content - Only Page Load Animation */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="relative text-center px-6 max-w-3xl"
+      >
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 transition-all duration-700">
           {slides[current].heading}
         </h1>
@@ -66,10 +74,12 @@ const Hero = () => {
               .getElementById("services")
               .scrollIntoView({ behavior: "smooth" })
           }
-          className="mt-8 px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition hover:scale-[1.1]">
+          className="mt-8 px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition hover:scale-105"
+        >
           Explore Services
         </button>
-      </div>
+      </motion.div>
+
     </section>
   );
 };
