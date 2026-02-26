@@ -85,10 +85,13 @@ const Footer = () => {
           <h3 className="text-base lg:text-lg font-semibold text-white mb-4 lg:mb-6">
             Address
           </h3>
-          <p className="text-sm lg:text-base leading-relaxed">
-            Ansal Fortune Arcade,<br />
-            Sector 18, Noida,<br />
+          <p className="text-sm lg:text-base leading-relaxed mb-2">
+            1. Sector 18, Noida,<br />
             Uttar Pradesh - 201301
+          </p>
+          <p className="text-sm lg:text-base leading-relaxed mb-2">
+            2. Nehru Place<br />
+            New Delhi - 110019
           </p>
 
           {/* Social Icons */}

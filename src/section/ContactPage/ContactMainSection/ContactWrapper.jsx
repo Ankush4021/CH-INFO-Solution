@@ -1,6 +1,5 @@
 import ReusableContactForm from "../../../components/ReusableContactForm";
 import servicesData from "../../HomePage/ServicesSection/servicesData";
-import ContactFormCard from "./ContactFormCard";
 import ContactSidePanel from "./ContactSidePanel";
 
 const ContactWrapper = () => {
@@ -10,7 +9,6 @@ const ContactWrapper = () => {
         <div className="grid lg:grid-cols-2 rounded-3xl overflow-hidden shadow-xl">
 
           <ContactSidePanel />
-          {/* <ContactFormCard /> */}
           <ReusableContactForm variant="contact" services={servicesData} />
 
         </div>

@@ -27,10 +27,10 @@ const ReusableContactForm = ({ variant = "home", services = [] }) => {
 
         emailjs
             .send(
-                "service_5a64f5r",
-                "template_an2t7ro",
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 templateParams,
-                "6lPpv2YzZ75IJ5CDa"
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             )
             .then(() => {
                 setLoading(false);
@@ -45,8 +45,9 @@ const ReusableContactForm = ({ variant = "home", services = [] }) => {
                 });
                 setTimeout(() => setSuccess(false), 3000);
             })
-            .catch(() => {
+            .catch((error) => {
                 setLoading(false);
+                console.error(error);
                 alert("Something went wrong.");
             });
     };

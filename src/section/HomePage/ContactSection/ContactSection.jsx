@@ -1,6 +1,5 @@
 import FadeSection from "../../../components/animations/FadeSection";
 import AnimatedHeading from "../../../components/ui/AnimatedHeading";
-import ContactForm from "./ContactForm";
 import ReusableContactForm from './../../../components/ReusableContactForm';
 
 const ContactSection = () => {
