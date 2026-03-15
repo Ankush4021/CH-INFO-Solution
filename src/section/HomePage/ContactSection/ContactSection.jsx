@@ -1,6 +1,7 @@
 import FadeSection from "../../../components/animations/FadeSection";
 import AnimatedHeading from "../../../components/ui/AnimatedHeading";
 import ReusableContactForm from './../../../components/ReusableContactForm';
+import servicesData from "../../HomePage/ServicesSection/servicesData";
 
 const ContactSection = () => {
     return (
@@ -30,7 +31,7 @@ const ContactSection = () => {
                     </div>
 
                     {/* Form */}
-                    <ReusableContactForm variant="home" />
+                    <ReusableContactForm variant="home" services={servicesData} />
 
                 </div>
             </section>
