@@ -65,9 +65,7 @@ const Footer = () => {
             Contact
           </h3>
           <div className="space-y-2 lg:space-y-3 text-sm lg:text-base flex flex-col">
-            <a href="tel:+918377996001" className="hover:text-blue-600 transition">
-              +91 8377996001
-            </a>
+           
             <a href="tel:+918377996001" className="hover:text-blue-600 transition">
               +91 7053926977
             </a>
