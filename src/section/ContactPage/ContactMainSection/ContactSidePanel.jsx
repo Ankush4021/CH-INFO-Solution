@@ -27,7 +27,6 @@ const ContactSidePanel = () => {
 
                 <div>
                     <p className="text-blue-200 text-sm">Phone</p>
-                    <p>+91 8377996001</p>
                     <p>+91 7053926977</p>
                 </div>
 
