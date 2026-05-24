@@ -26,7 +26,7 @@ const ContactCTA = () => {
                 </motion.p>
 
                 <motion.a
-                    href="tel:+918377996001"
+                    href="tel:+917053926977"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
