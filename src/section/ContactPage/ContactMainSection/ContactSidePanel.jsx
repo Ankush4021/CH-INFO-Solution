@@ -21,7 +21,7 @@ const ContactSidePanel = () => {
 
                 <div>
                     <p className="text-blue-200 text-sm">Email</p>
-                    <p>mohitbeniwal94636@gmail.com</p>
+                    
                     <p>dhruvbeniwal2314@gmail.com</p>
                 </div>
 
